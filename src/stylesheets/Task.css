@@ -1,0 +1,40 @@
+.task-body {
+    border: 2px solid var(--color);
+    display: flex;
+    flex-direction: row;
+    margin: 5px 5px 0px 5px;
+}
+
+.task-description {
+    width: 70%;
+}
+
+.task-date-body {
+    width: 30%;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.task-description {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    padding: 5px;
+}
+
+.date-title {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.date {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+}
