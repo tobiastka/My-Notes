@@ -1,0 +1,120 @@
+:root {
+    --color: #40513B;
+}
+
+.task-creator {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-creator-description {
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color);
+}
+
+.task-creator-body {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+
+}
+
+.task-creator-new-task-body {
+
+    height: 97%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+
+
+
+}
+
+.task-creator-new-task-input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: transparent;
+    border: 2px solid var(--color);
+    color: var(--color);
+    width: 100%;
+    height: 80%;
+    margin-bottom: 5px;
+    resize: none;
+}
+
+
+.task-creator-new-task-button {
+    height: 20%;
+    background-color: transparent;
+    border: 2px solid var(--color);
+    color: var(--color);
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.task-creator-new-task-button:hover {
+    background-color: var(--color);
+    color: #DFDFDF;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+textarea,
+input:focus {
+    outline: 0;
+}
+
+
+.task-creator-details {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: ce;
+    margin-left: 5px;
+
+}
+
+
+.important-button {
+    height: 20%;
+    width: 80%;
+    background-color: transparent;
+    border: 2px solid var(--color);
+    color: var(--color);
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.date-button {
+    margin-top: 5px;
+    height: 20%;
+    width: 80%;
+    background-color: transparent;
+    border: 2px solid var(--color);
+    color: var(--color);
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 200ms;
+
+}
+
+
+.details-img {
+    width: 55%;
+    margin-top: 2px;
+}
