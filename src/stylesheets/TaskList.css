@@ -1,0 +1,23 @@
+:root {
+    --color: #40513B;
+}
+
+.list {
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+.list-title {
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color);
+}
+
+.list-of-task {
+    height: 100%;
+}
