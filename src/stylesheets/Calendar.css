@@ -1,0 +1,68 @@
+.calendar {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.calendar-body {
+
+    width: 90%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 5px;
+    margin-left: 5px;
+    margin: auto;
+}
+
+.calendar-children {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid var(--color);
+    margin: 0px;
+    margin: 2px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-body {
+    height: 15%;
+    margin-top: 5px;
+    margin-left: 5px;
+
+
+}
+
+.calendar-title {
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color);
+}
+
+.date-selector {
+
+    display: flex;
+    justify-content: center;
+}
+
+.date-selector select {
+    height: 20%;
+    background-color: transparent;
+    border: 2px solid var(--color);
+    color: var(--color);
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 5px;
+}
+
+select:focus {
+    outline: 0;
+}
