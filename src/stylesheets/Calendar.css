@@ -19,12 +19,12 @@
 
 .calendar-children {
     font-family: Roboto;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     border: 2px solid var(--color);
     margin: 0px;
     margin: 2px;
-    height: 55px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,4 +65,8 @@
 
 select:focus {
     outline: 0;
+}
+
+.busy-day {
+    background-color: #7BC14C;
 }

@@ -96,7 +96,7 @@ input:focus {
     font-size: 20px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: 200ms;
+    transition: 100ms;
 }
 
 .date-button {
@@ -117,4 +117,10 @@ input:focus {
 .details-img {
     width: 55%;
     margin-top: 2px;
+}
+
+.task-important {
+    border: 4px solid #7BC14C;
+    color: #7BC14C;
+
 }

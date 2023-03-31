@@ -7,10 +7,7 @@ import './stylesheets/App.css';
 
 function App() {
 
-  const [tasks, setTasks] = useState({
-    toDoTasks: [],
-    completedTasks: []
-  })
+  const [tasks, setTasks] = useState([])
 
 
   return (
@@ -19,16 +16,16 @@ function App() {
       <div className="app-body">
         <div className="app-task-container">
           <div className="app-new-task">
-            <TaskCreator />
+            <TaskCreator setTasks={setTasks} />
           </div>
           <div className="app-tasks-list">
-            <TaskList />
+            <TaskList tasks={tasks} setTasks={setTasks} />
           </div>
         </div>
         <div className="app-calendar-container">
           <div className="calendar-container">
             <div className="calendar">
-              <Calendar />
+              <Calendar tasks={tasks} />
             </div>
           </div>
           <div className="proyect-description">

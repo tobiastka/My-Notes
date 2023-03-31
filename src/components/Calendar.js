@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import '../stylesheets/Calendar.css';
 
-function Calendar() {
+function Calendar({ tasks }) {
     const [date, setDate] = useState({
         year: new Date().getFullYear(),
         month: new Date().getMonth()
     })
     const generateCalendarData = (y = date.year, m = date.month) => {
-        console.log(y, m)
+
         const lastDay = new Date(y, m + 1, 0).getDate();
         const startsOn = new Date(y, m, 1).getDay();
         const DAYS_IN_WEEK = 7;
@@ -20,6 +20,18 @@ function Calendar() {
         }
     }
 
+    const dayHasTask = (day) => {
+        let bool = false;
+        tasks.forEach(task => {
+            const taskDate = new Date(date.year, date.month, day);
+            const dayDate = new Date(task.date);
+            if (taskDate.getDate() === dayDate.getDate() && taskDate.getMonth() === dayDate.getMonth() && taskDate.getFullYear() === dayDate.getFullYear()) {
+                bool = true;
+            }
+        });
+        return bool;
+    }
+
 
     const monthNames = [...Array(12).keys()].map(index => {
         return (new Date(date.year, index).toDateString().split(" ")[1])
@@ -29,7 +41,6 @@ function Calendar() {
     const data = generateCalendarData();
 
     const handlerDateChange = (e) => {
-        console.log(e.target.name);
         setDate((oldDate) => {
             return {
                 ...oldDate,
@@ -87,9 +98,10 @@ function Calendar() {
                 }
                 {
                     [...Array(data.lastDay).keys()].map((day) => {
+                        const boolDayTask = dayHasTask(day);
                         const realDay = day + 1;
                         return (
-                            <p key={day} className={`calendar-children`} style={realDay === 1 ? { gridColumnStart: data.startsOn + 1 } : {}}> {realDay}</p>
+                            <p key={day} className={`calendar-children ${boolDayTask ? "busy-day" : ""}`} style={realDay === 1 ? { gridColumnStart: data.startsOn + 1 } : {}}> {realDay}</p>
                         )
                     })
                 }
